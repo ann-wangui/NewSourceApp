@@ -1,5 +1,5 @@
 import unittest
-from app.models import Source
+from app.models_articles import Source
 
 class SourcesTest(unittest.TestCase):
     def setUp(self) -> None:

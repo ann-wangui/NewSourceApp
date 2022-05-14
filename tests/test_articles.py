@@ -1,5 +1,5 @@
 import unittest
-from app.models import Article
+from app.models_articles import Article
 
 class ArticlesTest(unittest.TestCase):
     def setUp(self):
