@@ -1,61 +1,137 @@
-{% extends 'base.html' %}
-{% import 'macros.html' as macro %}
+{%extends "base.html" %} {% import 'macros.html' as macro%} {% block content %}
+<link
+  rel="stylesheet"
+  href="{{url_for('static',filename='css/display.css')}}"
+  type="text/css"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+  rel="stylesheet"
+/>
 
-{% block content %}
+<div class="one">
+  <h1> </h1>
+  <h1 class="a">
+    Trending News All Around The World!
+  </h1>
+</div>
+<div class="b">
+  <div class="b1">
+  <h1> Search for any news of your choice here: </h1>
+  </div>
+  
 
-<div class="main-page">
-    <div class="display-tech-articles">
-        <div class="row tech-article-div">
-            <div class="col-md-6">
-                <a href="/tech" id="main-heading"><h1>Tech News</h1></a>
-                <h2>
-                    <a href="{{tech_articles[1].url}}" class="tech-article-title">
-                        {{tech_articles[1].title}}
-                    </a>
-                </h2>
-                <p class="tech-article-desc">{{tech_articles[1].description|truncate(200)}}</p>
-            </div>
-            <div class="col-md-6 other-tech-articles">
-                {% for article in tech_articles[5:10] %}
-                <p><a href="{{article.url}}" class="tech-article">{{article.title}}</a></p>
-                {% endfor %}
-            </div>
-        </div>
+  <div class="container-fluid">
+    <div class="b1">
+    <form>
+      <input
+        type="text"
+        name="article_query"
+        placeholder="Search for News"
+        class="form-control"
+      />
+      <input type="submit" value="" class="btn" />
+    </form>
     </div>
-    <div class="main-section">
-        <div class="row">
-            <div class="col-md-3 main-section-one">
-                <h4 class="main-heading source-heading text-center">News Sources Available</h4>
-                <ul>
-                    {% for source in all_sources[0:30] %}
-                    <li><a href="/source/{{source.id}}" class="source-title">{{source.name}}</a></li>
-                    {% endfor %}
-                    <br>
-                    <div><p><a href="/sources" class="more-sources">Click to view more sources</p></a></div>
-                </ul>
-            </div>
-            <div class="col-md-9 main-section-two">
-                <h4 class="main-heading text-center">What's New?</h4>
-                <div class="row main-section-two-row">
-                    {% for article in all_articles[:9] %}
-                    <div class="col-md-4 col-lg-4 col-xl-3 col-sm-6">
-                        <div class="card">
-                            <img class="card-img-top" src="{{article.urlToImage}}" alt="Card image cap">
-                            <div class="card-body main-section-two-card-body">
-                                <h5 class="card-title main-section-two-title">{{article.title}}</h5>
-                                <p class="card-text">{{article.description|truncate(100)}}
-                                    <a href="{{article.url}}" class="read-article">read article</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+    <div class="row">
     </div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-12 cat" id="general news">
+          <h1> General News </h1>
+        </div>
+        {{macro.sourceCategories(general)}}
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12 cat" id="sports">
+        <h1> Sports </h1>
+      </div>
+      {{macro.sourceCategories(sports)}}
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12 cat" id="business">
+        <h1> Business </h1>
+      </div>
+      {{macro.sourceCategories(business)}}
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12 cat" id="technology">
+        <h1> Technology </h1>
+      </div>
+      {{macro.sourceCategories(technology)}}
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12 cat" id="entertainment">
+        <h1> Entertainment </h1>
+      </div>
+      {{macro.sourceCategories(entertainment)}}
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12 cat" id="science">
+        <h1> Science </h1>
+      </div>
+      {{macro.sourceCategories(science)}}
+    </div>
+  </div>
 </div>
 
-{% include 'footer.html' %}
+<div class="footer">
+  <h3> Get To Know More About Us! </h3>
+  <div class="top">
+    <div class="text2">
+      <div class="box1">
+        <h1> CENTRE OF ALL THAT IS GOING AROUND THE WORLD! </h1>
+      </div>
+    </div>
+    <table class="table table-transparent table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">links</th>
+          <th scope="col">projects</th>
+          <th scope="col">guides</th>
+          <th scope="col">community</th>
+          <th scope="col">contacts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">home</td>
+          <td>geting started</td>
+          <td>repositories</td>
+          <td>issues</td>
+          <td>facebook</td>
+        </tr>
+        <tr>
+          <td scope="row">docs</td>
+          <td>Starter template</td>
+          <td>profile pic</td>
+          <td>discusion</td>
+          <td>Reddit</td>
+        </tr>
+        <tr>
+          <td scope="row">docs</td>
+          <td>Starter template</td>
+          <td>profile pic</td>
+          <td>discusion</td>
+          <td>LinkedIn</td>
+        </tr>
+        <tr>
+          <td scope="row"></td>
+          <td colspan="2"></td>
 
-{% endblock %}
+          <td>Twitter</td>
+          <td>Instagram</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %} 

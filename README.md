@@ -1,16 +1,8 @@
 # NewSourceApp
 An application that consumes the News - API and displays news sources and articles.
 
-## ontribution
-Ann Wangui
 
-## Technology used
-Python
-Flask
-HTML
-CSS3
 
-## Requirements
 An IDE such as VS code with Python version 3 installed,a terminal and a browser.
 
 ## Setup and Instruction
