@@ -12,7 +12,7 @@ An IDE such as VS code with Python version 3 installed,a terminal and a browser.
 4. Pip install dependancies highlighted on the requirements.txt by running pip install -r requirements.txt
 Create a start.sh file in the root directory of the folder and define the api key. You can generate the api key from the News API here
 5. Run chmod +x start.sh and ./start.sh respectively on the terminal.
-6. View the application on your browser through http://127.0.0.1:5000.
+
 
 ## Development
 To fix a bug or enhance an existing module, follow these steps:
