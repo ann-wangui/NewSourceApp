@@ -1,4 +1,5 @@
 alembic==1.7.7
+appdirs==1.4.3
 apturl==0.5.2
 asttokens==2.0.5
 backcall==0.2.0
@@ -25,12 +26,16 @@ entrypoints==0.3
 executing==0.8.3
 fasteners==0.14.1
 filelock==3.6.0
-Flask==1.1.2
+Flask==2.1.2
 Flask-Bootstrap==3.3.7.1
 Flask-Login==0.6.1
+Flask-Mail==0.9.1
 Flask-Migrate==3.1.0
+Flask-Reuploaded==1.2.0
 Flask-Script==2.0.6
+Flask-SimpleMDE==0.3.0
 Flask-SQLAlchemy==2.5.1
+Flask-Uploads==0.2.1
 Flask-WTF==1.0.1
 future==0.18.2
 greenlet==1.1.2
@@ -55,9 +60,11 @@ lockfile==0.12.2
 louis==3.12.0
 macaroonbakery==1.3.1
 Mako==1.1.0
+markdown2==2.4.3
 MarkupSafe==2.1.1
 matplotlib-inline==0.1.3
 monotonic==1.5
+more-itertools==4.2.0
 nest-asyncio==1.5.5
 netifaces==0.10.4
 oauthlib==3.1.0
@@ -69,10 +76,13 @@ pbr==5.8.1
 pexpect==4.6.0
 pickleshare==0.7.5
 Pillow==7.0.0
+pip-check-reqs==2.3.2
+pipenv==11.9.0
 platformdirs==2.5.2
 prompt-toolkit==3.0.29
 protobuf==3.6.1
 psutil==5.9.0
+psycopg2==2.9.3
 pure-eval==0.2.2
 pycairo==1.16.2
 pycups==1.9.73
@@ -89,6 +99,7 @@ pyRFC3339==1.1
 python-apt==2.0.0+ubuntu0.20.4.5
 python-dateutil==2.8.2
 python-debian===0.1.36ubuntu1
+python-dotenv==0.20.0
 pytz==2019.3
 pyxdg==0.26
 PyYAML==5.3.1
@@ -114,6 +125,7 @@ unattended-upgrades==0.1
 urllib3==1.25.8
 usb-creator==0.3.7
 virtualenv==20.14.1
+virtualenv-clone==0.3.0
 visitor==0.1.3
 wadllib==1.3.3
 wcwidth==0.2.5
